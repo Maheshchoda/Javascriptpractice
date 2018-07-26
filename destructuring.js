@@ -23,7 +23,34 @@ console.log(Fighthingtype);
 //Array Destructuring
 
 let RichestPersons = ['Bill Gates', 'Jeff Bezos', 'Amanico Ortega', 'Charles koch'];
-let [x, y, ...z] = RichestPersons;
+let [x, y, ...z] = RichestPersons;//we cant use numbers or strings in left side of assign
 console.log(x);
 console.log(y);
 console.log(z);
+
+//Function Destructuring
+
+ function getData({url , method = 'post'} ,callback){
+   callback(url, method);
+ }
+
+getData({url: 'google.com'}, function(url, method){
+  console.log(url, method);
+});
+
+getData({url: 'Facebook.com', method: 'put'}, function(url, method) {
+  console.log(url, method);
+})
+
+//Nested objects Destructuring
+let parentObject = {
+  title: 'InsideObject',
+  childObject: {
+    title: 'InsideChildObject'
+  }
+}
+
+let {title : changedTitle, childObject : { title : childTitle}} = parentObject;
+
+console.log(changedTitle);
+console.log(childTitle);

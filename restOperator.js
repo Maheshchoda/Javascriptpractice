@@ -5,3 +5,4 @@ function Names(name, ...params){
 }
 
 Names('Mahesh',3,3,5,345,3,'Kotesh');
+ 
