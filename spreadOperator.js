@@ -14,7 +14,7 @@ function Hotel(item, taste){
 
 Hotel('Biriyani','Good');
 
-//We can use the Spread opertor to split the array and pass as arguments to a function
+//We can use the Spread opertor to split the array and pass as arguments to a  function
 
 function Hotell(item, taste){
   console.log(`In Paradise ${item} is ${taste}`);
