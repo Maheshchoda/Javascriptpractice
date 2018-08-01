@@ -11,4 +11,4 @@ passbyReference(profile);
 
 (function selfInvoking(){
   console.log('Hello');
-})();
+}());
