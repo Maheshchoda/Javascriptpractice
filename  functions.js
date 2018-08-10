@@ -41,3 +41,30 @@ greet1('KariHmaA', function(name) {
 greet1('KarIShma', function(name) {
   return name.toLowerCase();
 });
+
+//Functions as first class objects
+
+function funname () {}//literals
+
+//object passing as a argument to function
+
+function ninja(hide){
+  hide.show = `This is from Ninja Function`;
+}
+ninja({});
+
+//passed as argument to other functions
+
+function message(Greet){
+  Greet();
+}
+
+message(function(){});
+
+//What's the difference between the arguments and parameter
+
+// ■ A parameter is a variable that we list as part of a function definition.
+// ■ An argument is a value that we pass to the function when we invoke it.
+//A function’s parameter list and its argument list can be different lengths:
+// – Unassigned parameters evaluate as undefined.
+// – Extra arguments aren’t bound to parameter names.
