@@ -9,4 +9,8 @@ const reverseOfaNumber = (num) => {
    console.log(`Please enter a number`);
   }
 }
-reverseOfaNumber(-90);
+reverseOfaNumber(2343);
+reverseOfaNumber(7000);
+reverseOfaNumber(-23434);
+reverseOfaNumber(-00002);
+reverseOfaNumber('You Entered a String');
