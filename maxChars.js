@@ -20,4 +20,19 @@ const MaxChars = (str) => {
   }
 }
 
+//Another method for counting the number of characters and take the input
+//only numbers and alphabets no special characters
+//Test cases: for selecting only the characters and the numbers
+var charCount = (str) => {
+  var charSet = {};
+  var char = 0;
+  str = str.toLowerCase().replace(/[\W_]/g,'');
+  for(var i = 0; i < str.length; i++){
+     char = str[i];
+    !charSet[char] ? charSet[char] = 1 : charSet[char]++;
+  }
+  console.log(charSet);
+}
+charCount('I Love You');
+
 MaxChars('Maheshe');
