@@ -1,3 +1,4 @@
+const assert = require('assert');
 function Callback(){
   console.log(`Hello from the Msg`);
 }
@@ -65,6 +66,47 @@ message(function(){});
 
 // ■ A parameter is a variable that we list as part of a function definition.
 // ■ An argument is a value that we pass to the function when we invoke it.
+
+
 //A function’s parameter list and its argument list can be different lengths:
+
 // – Unassigned parameters evaluate as undefined.
 // – Extra arguments aren’t bound to parameter names.
+
+
+//Immediate function invocation
+
+(function display () {
+  console.log(`Hello there`);
+})();
+
+
+//Function aliasing overcome with strict mode
+"use strict";
+function display(message) {
+  assert(message === `Mahesh`, `The value of message is mahesh`);
+  assert(arguments[0] = `Mahesh`, `The first agrument value is mahesh`);
+
+  arguments[0] = `Rajesh`;//reasigning with other value
+  assert(message === `Rajesh`, `The value is reasigned to rajesh`);
+  assert(arguments[0] === `Rajesh`, `The first argument value is Rajesh`);
+  //now the first argument is changed to Rajesh
+  //This is one of the disadvantage so we use strict mode to overcome it
+  console.log(message);
+  console.log(arguments[0]);
+}
+display('Mahesh');
+
+//below function example is easy to run in console
+function display(message){
+ console.log(message,arguments[0]);
+ arguments[0] = `Rajesh`;
+ console.log(message,arguments[0]);//we are reassigning the argumets and message value
+}
+
+"use strict"
+function display(message){
+ console.log(message,arguments[0]);
+ arguments[0] = `Rajesh`;
+ console.log(message,arguments[0]);//message value is not reassigned
+}
