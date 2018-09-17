@@ -80,8 +80,9 @@ message(function(){});
   console.log(`Hello there`);
 })();
 
+//Why we need to use Stirct mode ??????
 
-//Function aliasing overcome with strict mode
+//1)Function aliasing overcome with strict mode
 "use strict";
 function display(message) {
   assert(message === `Mahesh`, `The value of message is mahesh`);
@@ -104,9 +105,21 @@ function display(message){
  console.log(message,arguments[0]);//we are reassigning the argumets and message value
 }
 
-"use strict"
+"use strict";
 function display(message){
  console.log(message,arguments[0]);
  arguments[0] = `Rajesh`;
  console.log(message,arguments[0]);//message value is not reassigned
+}
+
+//2) the concept of this is changed
+
+function display(){
+  return this; //it return the global Window object
+}
+
+
+function display(){
+  "use strict";
+  return this; //it return the undefined
 }
