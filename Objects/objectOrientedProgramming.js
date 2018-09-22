@@ -79,3 +79,20 @@ class thirdPerson{
 const Mahesh = new thirdPerson('Mahesh', 'Choda');
 console.log(Mahesh.interests());
 console.log(Mahesh);
+
+
+//Inheritance with ES5
+
+function Dog(name){
+  this.name = name;
+}
+Dog.prototype.bark(){
+  return `${name} is Barking.`
+} 
+function Cat(name){
+  this.name = name;
+}
+
+Cat.prototype = Object.create(Dog.prototype);
+
+console.log(Cat.name);
