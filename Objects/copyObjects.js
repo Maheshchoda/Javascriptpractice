@@ -1,3 +1,9 @@
+// https://medium.com/@gamshan001/javascript-deep-copy-for-array-and-object-97e3d4bc401a
+ //Refer the above link to learn with the Deep copy and Shallow copy
+
+
+
+
 //The primitive data type of javascript
 // var, string, null, undefined, boolean
 
