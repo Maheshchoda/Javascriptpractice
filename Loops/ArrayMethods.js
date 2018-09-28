@@ -1,10 +1,10 @@
 //Advanced Array methods
-//   1)forEach
-//   2)Map
-//   3)Filter
+//   1)forEach(return undefined)
+//   2)Map(Creates a new Array of Same length and return the Array)
+//   3)Filter(Create a new Array and return the boolean value)
 //   4)some
 //   5)Every
-//   6)Reduce
+//   6)Reduce(take input the callback function and optional parameter)
 
 
 //****   forEach ********
