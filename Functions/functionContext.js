@@ -1,6 +1,6 @@
 //For every function it automaticall pass two
-//implicit  parameters they are the this and arguments
-//arguments is the arguments that we passed druring the function automaticall
+//implicit  parameters they are the "this" and "arguments"
+//arguments  is that we passed druring the function calling
 //this is based on the function context (or)execution context
  //Function context:- refers to how we are calling the Function
 
