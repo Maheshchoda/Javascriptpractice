@@ -14,3 +14,5 @@ reverseOfaNumber(7000);
 reverseOfaNumber(-23434);
 reverseOfaNumber(-00002);
 reverseOfaNumber('You Entered a String');
+
+//[a, b] = [b, a]
