@@ -2,11 +2,11 @@
 
 const arrayChunking = (array, chunk) => {
   let chunked = [];
-  for(let val of array){
+  for (let val of array) {
     chunked.push(val);
   }
   console.log(chunked);
-}
+};
 
 let array = [2, 3, 4, 23, 33];
 arrayChunking(array, 2);

@@ -5,7 +5,7 @@
 //4)invovke with the apply and call
 
 var name = `Mahesh`;
-function firstMethod(){
+function firstMethod() {
   console.log(this.name);
   return this.name;
 }
@@ -16,9 +16,9 @@ firstMethod();
 //invoke that function we the help of that proerty is called method.
 var ninja = {
   name1: `Naruto Uzumaki`,
-  group1: function(){
-    console.log(this.name1);//this context to refer to the object
+  group1: function() {
+    console.log(this.name1); //this context to refer to the object
     return this.name1;
   }
-}
+};
 ninja.group1();

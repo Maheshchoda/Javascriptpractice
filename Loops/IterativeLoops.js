@@ -5,7 +5,7 @@
 const Anime = [`One punch man`, `One piece`, `Naruto Shipdden`, `Beyblade`];
 
 console.log(`Implementing "for of" Loop in Arrays`);
-for( let val of Anime) {
+for (let val of Anime) {
   console.log(val);
 }
 
@@ -14,11 +14,11 @@ for( let val of Anime) {
 //In Object it's going to give the key
 
 console.log(`Implementing "for in" Loop in Arrays`);
-for(let val in Anime){
+for (let val in Anime) {
   console.log(val);
 }
 
-const Address  = { city: `Ongole`, colony: `Bagyanagr`};
+const Address = { city: `Ongole`, colony: `Bagyanagr` };
 
 console.log(`Implementing "for in" Loop in Objects`);
 for (let val in Address) {

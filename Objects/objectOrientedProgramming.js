@@ -88,7 +88,7 @@ function Dog(name){
 }
 Dog.prototype.bark(){
   return `${name} is Barking.`
-} 
+}
 function Cat(name){
   this.name = name;
 }

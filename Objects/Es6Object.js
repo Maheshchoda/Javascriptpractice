@@ -1,5 +1,4 @@
-
-class Student{
+class Student {
   constructor(name, age) {
     this.name = name;
     this.age = age;
@@ -8,9 +7,13 @@ class Student{
 
 class School extends Student {
   constructor(name, age, sex) {
-    super(name,age);
+    super(name, age);
     this.sex = sex;
-    console.log(`Hello this is ${this.name} and my age is ${this.age} and i am ${this.sex}`);
+    console.log(
+      `Hello this is ${this.name} and my age is ${this.age} and i am ${
+        this.sex
+      }`
+    );
   }
 }
 

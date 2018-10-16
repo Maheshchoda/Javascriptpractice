@@ -8,7 +8,6 @@
 //does not end its execution. Instead a generator is merely suspend.
 //Then when a request for another value comes along, the generator resumes where it left off
 
-
 //A generator function is created with a function* declaration.
 // When it is called, its body is not immediately executed.
 //Instead, it returns a result is an object with a returned value and an indicator that tells us whether the generator has more values.
@@ -19,7 +18,7 @@
 
 //*****************Basics******************
 
-function* Generator(){
+function* Generator() {
   yield `First`;
   yield `Second`;
   yield `Third`;
@@ -30,44 +29,44 @@ function* Generator(){
 const Gen = Generator();
 
 console.log(`Generator Basics`);
-console.log(Gen.next().value);//First  Done: false
-console.log(Gen.next().value);//Second Done: false
-console.log(Gen.next().value);//Third  Done: false
-console.log(Gen.next().value);//Fourth  Done: false
-console.log(Gen.next().value);//Fifth   Done: false
-console.log(Gen.next().value);//undefined  Done: true
+console.log(Gen.next().value); //First  Done: false
+console.log(Gen.next().value); //Second Done: false
+console.log(Gen.next().value); //Third  Done: false
+console.log(Gen.next().value); //Fourth  Done: false
+console.log(Gen.next().value); //Fifth   Done: false
+console.log(Gen.next().value); //undefined  Done: true
 
 //Generator exercise to add the given n values
 
 function* Sum() {
   let sum = 0;
-  for(let i = 0; i < arguments.length; i++) {
-    yield sum += arguments[i];
+  for (let i = 0; i < arguments.length; i++) {
+    yield (sum += arguments[i]);
   }
 }
 
-const Add = Sum(1,2,3,1,3);
+const Add = Sum(1, 2, 3, 1, 3);
 
 console.log(`Adding with Generator function`);
-console.log(Add.next().value);//1 done: false
-console.log(Add.next().value);//3 done: false
-console.log(Add.next().value);//6 done: false
-console.log(Add.next().value);//7 done: false
-console.log(Add.next().value);//10 done: false
-console.log(Add.next().value);//undefined done: true
+console.log(Add.next().value); //1 done: false
+console.log(Add.next().value); //3 done: false
+console.log(Add.next().value); //6 done: false
+console.log(Add.next().value); //7 done: false
+console.log(Add.next().value); //10 done: false
+console.log(Add.next().value); //undefined done: true
 
 //ITERATING THE ITERATOR:--
- function* gener() {
-   yield `Hello`;
-   yield `Hello1`;
-   yield `Hello2`;
-   yield `Hello3`;
- }
+function* gener() {
+  yield `Hello`;
+  yield `Hello1`;
+  yield `Hello2`;
+  yield `Hello3`;
+}
 
- const Iter = gener();//we created the Iterator
+const Iter = gener(); //we created the Iterator
 
 console.log(`Iterator with forOf loop`);
-for(let val of Iter) {
+for (let val of Iter) {
   console.log(val);
 }
 
@@ -75,7 +74,7 @@ for(let val of Iter) {
 
 function* idGenerator() {
   let id = 0;
-  while(true){
+  while (true) {
     yield ++id;
   }
 }
@@ -88,7 +87,6 @@ console.log(idIterator.next().value);
 console.log(idIterator.next().value);
 console.log(idIterator.next().value);
 
-
 // YIELDING TO ANOTHER GENERATOR
 // Just as we often call one standard function from another standard function,
 // in certain cases we want to be able to delegate the execution of one generator to another.
@@ -100,7 +98,7 @@ function* gen1() {
   yield `From the gen1`;
 }
 
-function* gen2(){
+function* gen2() {
   yield `From the gen2`;
   yield `From the gen2`;
 }
@@ -108,18 +106,18 @@ function* gen2(){
 const Iterat = gen1();
 
 console.log(`Yielding to the another generator`);
-for(let val of Iterat) {
+for (let val of Iterat) {
   console.log(val);
 }
 
 // Communicating with a generator:--
- //  We can also send data to a generator, thereby achieving two-way communication!
+//  We can also send data to a generator, thereby achieving two-way communication!
 
 // SENDING VALUES AS GENERATOR FUNCTION ARGUMENTS
 
-function* Gen1(name){
-  const message = yield(`Hello ${name}`);
-  yield (`Good Morning ${message} and  ${name}`);
+function* Gen1(name) {
+  const message = yield `Hello ${name}`;
+  yield `Good Morning ${message} and  ${name}`;
 }
 
 const It1 = Gen1(`Mahesh`);
@@ -134,17 +132,17 @@ console.log(result2);
 
 //So Generator mainly goes through the four states
 //1) """"Suspended start"""" :--  When the generator is created, it starts in this state.
-        //  None of the generator’s code is executed.
+//  None of the generator’s code is executed.
 //2) """"""Executing"""""" :-- The state in which the code of the generator is executed.
-        // The execution continues either from the beginning or from where the generator was last suspended.
-        // A generator moves to this state when the matching iterator’s next method is called, and there exists code to be executed.
+// The execution continues either from the beginning or from where the generator was last suspended.
+// A generator moves to this state when the matching iterator’s next method is called, and there exists code to be executed.
 
 //3) """"Suspended yield"""" :-- During execution, when a generator reaches a yield expression,
-              // it creates a new object carrying the return value, yields it, and suspends its execution.
-              // This is the state in which the generator is paused and is waiting to continue its execution.
+// it creates a new object carrying the return value, yields it, and suspends its execution.
+// This is the state in which the generator is paused and is waiting to continue its execution.
 
 //4) """"Completed"""" :-— If during execution the generator either runs into a return statement or runs out of code to execute,
-           // the generator moves into this state.
+// the generator moves into this state.
 
 //Sample code and explaining the states
 function* NinjaGenerator() {
@@ -158,14 +156,14 @@ const ninjaIterator = NinjaGenerator();
 const result1 = ninjaIterator.next();
 // Activate generator. Move from Suspended
 // start to Executing. Execute up to yield "Hattori" and pause. Move to the Suspended yield state.
- // Return a new object: {value: "Hattori",done: false}.
+// Return a new object: {value: "Hattori",done: false}.
 
- const result2 = ninjaIterator.next();
+const result2 = ninjaIterator.next();
 // Reactivate generator. Move from Suspended
 // yield to Executing. Execute up to yield "Yoshi" and pause. Move to the Suspended yield state.
 //Return a new object: {value: "Yoshi",done: false}.
 
 const result3 = ninjaIterator.next();
 //  Reactivate generator. Move from Suspended yield to Executing.
- // No more code to execute. Move to the Completed state.
-  // Return a new object: {value: undefined, done: true}.
+// No more code to execute. Move to the Completed state.
+// Return a new object: {value: undefined, done: true}.
