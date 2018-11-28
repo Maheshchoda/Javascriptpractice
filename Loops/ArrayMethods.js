@@ -166,7 +166,7 @@ leaveCheck(Employer1);
 
 // }, optional second parameter)
 
-let Choclates = [1, 2, 3, 4, 5];
+let Choclates = [1, 2, 3, 4, 5, 1, 1, 3, 5, 9];
 
 //Reduce method without passing optional parameter, so the first value of array
 // is going to act like accumulator

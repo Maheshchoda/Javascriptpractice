@@ -16,9 +16,9 @@ grettings1(undefined, "Suresh");
 
 //before ES6 the default parameters passed as
 function friends(name1, name2, name3) {
-  name1 = typeof name1 === `undefined` ? `Prasath` : name3;
-  name2 = typeof name2 === `undefined` ? `Arun` : name3;
+  name1 = typeof name1 === `undefined` ? `Prasath` : name1;
+  name2 = typeof name2 === `undefined` ? `Arun` : name2;
   name3 = typeof name3 === `undefined` ? `Mishu` : name3;
   console.log(`${name1} ${name2} ${name3}`);
 }
-friends(`kotes`, `pilleas`, `ravopr`);
+friends(`pilleas`, `ravopr`);

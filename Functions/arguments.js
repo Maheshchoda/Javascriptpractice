@@ -17,12 +17,23 @@ infiltrate("gardener");
 
 //another example
 
-function sum() {
-  var result = 0;
-  for (let i = 0; i < arguments.length; i++) {
-    result += arguments[i];
-  }
-  console.log(result);
+// function sum() {
+//   var result = 0;
+//   for (let i = 0; i < arguments.length; i++) {
+//     result += arguments[i];
+//   }
+//   console.log(result);
+// }
+//
+// sum(1, 2, 4, 5, 6);
+
+//Another use case of the strict mode
+
+function name() {
+  console.log(this); // window as function context
 }
 
-sum(1, 2, 4, 5, 6);
+function naame() {
+  "use strict";
+  console.log(this); //undefined as context
+}

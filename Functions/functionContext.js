@@ -11,7 +11,7 @@
 //4) calling the function with the call, apply and bind methods
 
 //basically this is based on three things
-//Global, implicti binding, explicit binding
+//Global, implict binding, explicit binding
 
 //Global and call as a Function
 
@@ -31,7 +31,7 @@ const greet = {
 const hello = {
   firstName: "Mahesh",
   sayHi: function() {
-    return this.name; //going to return Mahesh
+    return this.firstName; //going to return Mahesh
     //In implicit binding it going to refer the nearest parent
     //so function context is hello
   }
