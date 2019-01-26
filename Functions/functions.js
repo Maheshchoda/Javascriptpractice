@@ -120,3 +120,5 @@ function display() {
   "use strict";
   return this; //it return the undefined
 }
+
+//Arrow functions (or) Lambda notation

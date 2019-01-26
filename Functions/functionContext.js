@@ -1,7 +1,7 @@
 //For every function it automaticall pass two
 //implicit  parameters they are the "this" and "arguments"
-//arguments  is that we passed druring the function calling
-//this is based on the function context (or)execution context
+//"arguments"  is that we passed druring the function calling
+//"this" is based on the function context (or)execution context
 //Function context:- refers to how we are calling the Function
 
 //We can call the function in four ways
@@ -57,7 +57,7 @@ person.bird.parrot(); //return undefined
 //because of parrot is in another object and there 'this' refers
 //to bird we can overcome this problem with the Explicit binding
 
-//Explicit binding is we are goint to set the function context
+//Explicit binding is we are going to set the function context
 //we can do it in three ways
 //1)call 2)Apply 3)binding
 //1)Call is going to take n of arguments
