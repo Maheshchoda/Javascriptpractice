@@ -84,6 +84,6 @@ Rahesh.studentsInSameCountry([Mahesh, Rajesh])
 
 function Selector(country, school){
   return function(student){
-    return student.address.country() === coun
+    return student.address.country() === country && student.school() === school;
   }
 }
