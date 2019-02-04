@@ -1,0 +1,13 @@
+When Javascript applications get to a certain size, it’s helpful
+to separate the code into modules.
+However, when we do so, we can end up with code imported that isn’t
+actually used.
+
+Tree shaking is a method of optimising our code bundles by eliminating
+any code from the final file that isn’t actually being used.
+
+What's the difference between require and ES6 import ?
+
+To know the difference and much about tree shaking please visit
+the following link
+https://bitsofco.de/what-is-tree-shaking/

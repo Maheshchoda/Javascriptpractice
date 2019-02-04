@@ -1,0 +1,21 @@
+What are you Javascript ?
+    ** Javascript is a Single-threaded, non-blocking, asynchronous concurrent
+       language.
+    ** Javascript have the call stack, event loop, and callback queue and apis.
+
+1) Single-threaded:-
+        One thing at a time == One call Stack == One thread
+
+2) Event Loop:-
+       (The code is pushed into CALL STACK, if it is an asynchronous request
+        it pop from the stack and pushed into the WEB APIS, after the process
+        completion it pushed into CALLBACK QUEUE, now event loop come into the
+        place, if stack is empty and it check the callback queue, if a process
+        is running it immediately pushed into the stack that's what event Loop
+        basically does)
+        *  It will look at the callback queue and call stack.
+        *  If call Stack is empty check the callback queue, if there is any
+           process running push into the call stack or remain idle.
+
+3) WebAssembly:- (WASM)
+      WebAssembly (Wasm) enables compilation of code written in C++ and other languages to               run on the web. 
