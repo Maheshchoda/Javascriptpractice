@@ -30,3 +30,13 @@ const refiendArray3 = duplicateArray.reduce((unique, item) => {
 }, []);
 
 console.log("By using reduce method", refiendArray3);
+
+//ON the three above methods which is the most efficient one
+
+//Any Guess????????????
+
+//It is filter() method which gives the best performance in the sense of
+// time complexity.
+
+//To check the benchmarks of the above method please visit bellow link
+//https://blog.usejournal.com/performance-of-javascript-array-ops-2690aed47a50
