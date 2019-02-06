@@ -1,0 +1,14 @@
+{
+  "name": "03_loops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01_for-loop.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "performance-now": "^2.1.0"
+  }
+}
