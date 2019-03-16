@@ -1,4 +1,4 @@
-//For every function it automaticall pass two
+//For every function it automatically pass two
 //implicit  parameters they are the "this" and "arguments"
 //"arguments"  is that we passed druring the function calling
 //"this" is based on the function context (or)execution context
