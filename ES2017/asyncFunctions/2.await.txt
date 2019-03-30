@@ -1,0 +1,7 @@
+Handling results and errors of asynchronous computations via await
+
+The Operator await (which is only allowed inside async function) waits for
+it's operand, a Promise to be settled:
+
+-> If the Promise is fulfilled, the result of await is the fulfilment value.
+-> If the Promise is rejected, await throws the rejection value.
