@@ -136,3 +136,10 @@ promise.then(() => fail("Happy path, won't be called!")) .catch(() => pass("Prom
 //if we want only sucess scenarios .then(() => success)
 //if we want only failure scenarios .then(null, () => failure) //we need to pass it as second argument
 //or we can achieve the above line with .catch()//which result the same
+
+
+
+//Promise.all and Promise.race
+
+//Promise.all let's us know when either all input promises are full filled or one of them rejects.
+//Promise.race let's us know as soon as one input settles which means either full fills or rejects.

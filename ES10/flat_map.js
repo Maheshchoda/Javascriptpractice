@@ -8,7 +8,11 @@ const result = [1, 2, 3].map(x => {
 console.log(result);
 //Output:- [ [ 1, 1 ], [ 2, 4 ], [ 3, 9 ] ]
 
-//If we want the result as flat we can use flatmap
+//now if we want to flatten the array into single level
+//we can use array.flat() method and obtain the result
+
+//what if we want to achieve the both results in one go
+//Now answer is the flatmap
 
 const result2 = [1, 2, 3].flatMap(x => {
   return [x, x * x];
